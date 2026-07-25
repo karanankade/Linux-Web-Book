@@ -2481,10 +2481,14 @@ code {
     left: 0 !important;
     top: 0 !important;
     bottom: 0 !important;
+    height: 100vh !important;
+    height: 100dvh !important;
     width: 290px !important;
     max-width: 85vw !important;
     z-index: 10001 !important;
     background-color: var(--bg-secondary) !important;
+    display: flex !important;
+    flex-direction: column !important;
     transform: translateX(-100%) !important;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.7) !important;
@@ -2492,6 +2496,23 @@ code {
 
   .sidebar.open {
     transform: translateX(0) !important;
+  }
+
+  .sidebar-header,
+  .search-container {
+    flex-shrink: 0 !important;
+  }
+
+  .sidebar-menu {
+    flex: 1 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 15px 12px 30px 12px !important;
+  }
+
+  .menu-link {
+    padding: 12px 14px !important;
+    font-size: 0.9rem !important;
   }
 
   .mobile-menu-toggle {

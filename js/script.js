@@ -782,7 +782,7 @@ nameserver 1.1.1.1`,
     }
 
     // Auto-dismiss mobile sidebar when menu item selected
-    document.querySelectorAll('.menu-item').forEach(item => {
+    document.querySelectorAll('.menu-item, .menu-link').forEach(item => {
       item.addEventListener('click', () => {
         if (window.innerWidth <= 768 && sidebarEl) {
           sidebarEl.classList.remove('open');
