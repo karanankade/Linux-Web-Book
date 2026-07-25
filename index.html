@@ -2244,132 +2244,136 @@ passwd: all authentication tokens updated successfully.</pre>
               </div>
             </div>
 
-            <!-- Command Mode Tables -->
-            <div style="margin-top: 30px; display: grid; grid-template-columns: 1fr; gap: 20px;">
-              <div>
-                <h4><i class="fas fa-terminal"></i> Command Mode Keyboard Shortcuts</h4>
-                <p>Use these shortcuts when in **Command/Normal Mode** to perform fast inline edits:</p>
-                <div class="comparison-table-wrapper">
-                  <table class="comparison-table">
-                    <thead>
-                      <tr>
-                        <th>Shortcut</th>
-                        <th>Action</th>
-                        <th>Scope</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><code>yy</code></td>
-                        <td>Copy (Yank) active line</td>
-                        <td>Active row</td>
-                      </tr>
-                      <tr>
-                        <td><code>yw</code></td>
-                        <td>Copy (Yank) active word</td>
-                        <td>Word under cursor</td>
-                      </tr>
-                      <tr>
-                        <td><code>nyy</code></td>
-                        <td>Copy <code>n</code> lines</td>
-                        <td>Multiple rows</td>
-                      </tr>
-                      <tr>
-                        <td><code>dd</code></td>
-                        <td>Delete (Cut) active line</td>
-                        <td>Active row</td>
-                      </tr>
-                      <tr>
-                        <td><code>dw</code></td>
-                        <td>Delete (Cut) active word</td>
-                        <td>Word under cursor</td>
-                      </tr>
-                      <tr>
-                        <td><code>ndd</code></td>
-                        <td>Delete <code>n</code> lines</td>
-                        <td>Multiple rows</td>
-                      </tr>
-                      <tr>
-                        <td><code>p</code></td>
-                        <td>Paste copied buffer</td>
-                        <td>Pastes below active cursor line</td>
-                      </tr>
-                      <tr>
-                        <td><code>u</code></td>
-                        <td>Undo last operation</td>
-                        <td>Supports up to 1000 history levels</td>
-                      </tr>
-                      <tr>
-                        <td><code>Ctrl + r</code></td>
-                        <td>Redo last undone operation</td>
-                        <td>Reverses undo commands</td>
-                      </tr>
-                      <tr>
-                        <td><code>gg</code></td>
-                        <td>Jump to top line</td>
-                        <td>Line 1</td>
-                      </tr>
-                      <tr>
-                        <td><code>G</code></td>
-                        <td>Jump to bottom line</td>
-                        <td>Last line of file</td>
-                      </tr>
-                      <tr>
-                        <td><code>ngg</code> or <code>nG</code></td>
-                        <td>Jump to specific line <code>n</code></td>
-                        <td>Line <code>n</code></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <!-- Command Mode & Extended Mode Tables in Callout Cards -->
+            <div class="callout" style="border-left: 4px solid var(--accent-success); margin-top: 30px;">
+              <div class="callout-title" style="color: var(--accent-success); display: flex; align-items: center; justify-content: space-between;">
+                <span><i class="fas fa-terminal"></i> Command Mode Keyboard Shortcuts</span>
+                <span class="highlight-badge" style="background-color: rgba(16, 185, 129, 0.1); color: var(--accent-success);">Normal Mode</span>
               </div>
+              <p>Use these shortcuts when in <strong>Command/Normal Mode</strong> to perform fast inline edits:</p>
+              <div class="comparison-table-wrapper" style="margin-top: 15px;">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Shortcut</th>
+                      <th>Action</th>
+                      <th>Scope</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>yy</code></td>
+                      <td>Copy (Yank) active line</td>
+                      <td>Active row</td>
+                    </tr>
+                    <tr>
+                      <td><code>yw</code></td>
+                      <td>Copy (Yank) active word</td>
+                      <td>Word under cursor</td>
+                    </tr>
+                    <tr>
+                      <td><code>nyy</code></td>
+                      <td>Copy <code>n</code> lines</td>
+                      <td>Multiple rows</td>
+                    </tr>
+                    <tr>
+                      <td><code>dd</code></td>
+                      <td>Delete (Cut) active line</td>
+                      <td>Active row</td>
+                    </tr>
+                    <tr>
+                      <td><code>dw</code></td>
+                      <td>Delete (Cut) active word</td>
+                      <td>Word under cursor</td>
+                    </tr>
+                    <tr>
+                      <td><code>ndd</code></td>
+                      <td>Delete <code>n</code> lines</td>
+                      <td>Multiple rows</td>
+                    </tr>
+                    <tr>
+                      <td><code>p</code></td>
+                      <td>Paste copied buffer</td>
+                      <td>Pastes below active cursor line</td>
+                    </tr>
+                    <tr>
+                      <td><code>u</code></td>
+                      <td>Undo last operation</td>
+                      <td>Supports up to 1000 history levels</td>
+                    </tr>
+                    <tr>
+                      <td><code>Ctrl + r</code></td>
+                      <td>Redo last undone operation</td>
+                      <td>Reverses undo commands</td>
+                    </tr>
+                    <tr>
+                      <td><code>gg</code></td>
+                      <td>Jump to top line</td>
+                      <td>Line 1</td>
+                    </tr>
+                    <tr>
+                      <td><code>G</code></td>
+                      <td>Jump to bottom line</td>
+                      <td>Last line of file</td>
+                    </tr>
+                    <tr>
+                      <td><code>ngg</code> or <code>nG</code></td>
+                      <td>Jump to specific line <code>n</code></td>
+                      <td>Line <code>n</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-              <div>
-                <h4><i class="fas fa-sign-out-alt"></i> Extended Mode Command Line Operations</h4>
-                <p>Enter extended mode by typing <code>:</code> (colon) to save files, quit the editor, or toggle configurations:</p>
-                <div class="comparison-table-wrapper">
-                  <table class="comparison-table">
-                    <thead>
-                      <tr>
-                        <th>Command</th>
-                        <th>Action</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><code>:w</code></td>
-                        <td>Write (Save)</td>
-                        <td>Saves active file contents to disk.</td>
-                      </tr>
-                      <tr>
-                        <td><code>:q</code></td>
-                        <td>Quit (Exit)</td>
-                        <td>Closes Vim. Fails if there are unsaved edits.</td>
-                      </tr>
-                      <tr>
-                        <td><code>:wq</code></td>
-                        <td>Write & Quit</td>
-                        <td>Saves changes and exits to shell. (Same as <code>:x</code>).</td>
-                      </tr>
-                      <tr>
-                        <td><code>:w!</code> / <code>:q!</code> / <code>:wq!</code></td>
-                        <td>Forceful operation</td>
-                        <td>Ignores locks or warnings (e.g. quit without saving changes).</td>
-                      </tr>
-                      <tr>
-                        <td><code>:se nu</code></td>
-                        <td>Set line numbers</td>
-                        <td>Displays serial numbers along left editor gutter margin.</td>
-                      </tr>
-                      <tr>
-                        <td><code>:se nonu</code></td>
-                        <td>Remove line numbers</td>
-                        <td>Hides margin numbers for clean viewing.</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="callout" style="border-left: 4px solid var(--accent); margin-top: 30px;">
+              <div class="callout-title" style="color: var(--accent); display: flex; align-items: center; justify-content: space-between;">
+                <span><i class="fas fa-sign-out-alt"></i> Extended Mode Command Line Operations</span>
+                <span class="highlight-badge" style="background-color: rgba(67, 97, 238, 0.1); color: var(--accent);">: (Colon Mode)</span>
+              </div>
+              <p>Enter extended mode by typing <code>:</code> (colon) to save files, quit the editor, or toggle configurations:</p>
+              <div class="comparison-table-wrapper" style="margin-top: 15px;">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>Command</th>
+                      <th>Action</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>:w</code></td>
+                      <td>Write (Save)</td>
+                      <td>Saves active file contents to disk.</td>
+                    </tr>
+                    <tr>
+                      <td><code>:q</code></td>
+                      <td>Quit (Exit)</td>
+                      <td>Closes Vim. Fails if there are unsaved edits.</td>
+                    </tr>
+                    <tr>
+                      <td><code>:wq</code></td>
+                      <td>Write & Quit</td>
+                      <td>Saves changes and exits to shell. (Same as <code>:x</code>).</td>
+                    </tr>
+                    <tr>
+                      <td><code>:w!</code> / <code>:q!</code> / <code>:wq!</code></td>
+                      <td>Forceful operation</td>
+                      <td>Ignores locks or warnings (e.g. quit without saving changes).</td>
+                    </tr>
+                    <tr>
+                      <td><code>:se nu</code></td>
+                      <td>Set line numbers</td>
+                      <td>Displays serial numbers along left editor gutter margin.</td>
+                    </tr>
+                    <tr>
+                      <td><code>:se nonu</code></td>
+                      <td>Remove line numbers</td>
+                      <td>Hides margin numbers for clean viewing.</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
 
