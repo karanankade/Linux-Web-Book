@@ -658,7 +658,13 @@ nameserver 1.1.1.1`,
     elements.contentBody.scrollTop = 0;
 
     // Close sidebar on mobile
-    elements.sidebar.classList.remove('open');
+    if (typeof toggleMobileSidebar === 'function') {
+      toggleMobileSidebar(false);
+    } else {
+      if (elements.sidebar) elements.sidebar.classList.remove('open');
+      const overlay = document.getElementById('sidebar-overlay');
+      if (overlay) overlay.classList.remove('active');
+    }
 
     // Update footer navigation buttons
     updateFooterNavButtons(currentIndex);
@@ -762,31 +768,46 @@ nameserver 1.1.1.1`,
     });
 
     // Mobile sidebar toggle and backdrop overlay handlers
+    function toggleMobileSidebar(forceState) {
+      const sidebar = elements.sidebar || document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      if (!sidebar) return;
+
+      const shouldOpen = (typeof forceState === 'boolean') ? forceState : !sidebar.classList.contains('open');
+
+      if (shouldOpen) {
+        sidebar.classList.add('open');
+        if (overlay) overlay.classList.add('active');
+      } else {
+        sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
+      }
+    }
+    window.toggleMobileSidebar = toggleMobileSidebar;
+
     const mobileToggleBtn = document.getElementById('mobile-toggle');
-    const sidebarEl = document.getElementById('sidebar');
     const sidebarOverlay = document.getElementById('sidebar-overlay');
 
-    if (mobileToggleBtn && sidebarEl) {
+    if (mobileToggleBtn) {
       mobileToggleBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        sidebarEl.classList.toggle('open');
-        if (sidebarOverlay) sidebarOverlay.classList.toggle('active');
+        e.preventDefault();
+        toggleMobileSidebar();
       });
     }
 
-    if (sidebarOverlay && sidebarEl) {
-      sidebarOverlay.addEventListener('click', () => {
-        sidebarEl.classList.remove('open');
-        sidebarOverlay.classList.remove('active');
+    if (sidebarOverlay) {
+      sidebarOverlay.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMobileSidebar(false);
       });
     }
 
     // Auto-dismiss mobile sidebar when menu item selected
     document.querySelectorAll('.menu-item, .menu-link').forEach(item => {
       item.addEventListener('click', () => {
-        if (window.innerWidth <= 768 && sidebarEl) {
-          sidebarEl.classList.remove('open');
-          if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        if (window.innerWidth <= 768) {
+          toggleMobileSidebar(false);
         }
       });
     });
