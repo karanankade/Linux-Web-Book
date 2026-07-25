@@ -2570,50 +2570,7 @@ code {
     font-size: 0.85rem !important;
   }
 
-  /* Specific Mobile Optimization for Vim Editor Tables (#vim-editor) */
-  #vim-editor .comparison-table-wrapper {
-    overflow-x: visible !important;
-    width: 100% !important;
-    margin-top: 10px !important;
-  }
 
-  #vim-editor .comparison-table {
-    display: table !important;
-    width: 100% !important;
-    table-layout: fixed !important;
-    white-space: normal !important;
-    font-size: 0.78rem !important;
-  }
-
-  #vim-editor .comparison-table th,
-  #vim-editor .comparison-table td {
-    padding: 7px 5px !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    word-break: break-word !important;
-    vertical-align: top !important;
-  }
-
-  #vim-editor .comparison-table th:nth-child(1),
-  #vim-editor .comparison-table td:nth-child(1) {
-    width: 25% !important;
-  }
-
-  #vim-editor .comparison-table th:nth-child(2),
-  #vim-editor .comparison-table td:nth-child(2) {
-    width: 42% !important;
-  }
-
-  #vim-editor .comparison-table th:nth-child(3),
-  #vim-editor .comparison-table td:nth-child(3) {
-    width: 33% !important;
-  }
-
-  #vim-editor .comparison-table code {
-    font-size: 0.75rem !important;
-    padding: 2px 4px !important;
-    word-break: break-word !important;
-  }
 
   /* Universal Inline Grid Collapses to Single Column */
   .fhs-explorer,
