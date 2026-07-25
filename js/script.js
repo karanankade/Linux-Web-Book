@@ -761,6 +761,36 @@ nameserver 1.1.1.1`,
       });
     });
 
+    // Mobile sidebar toggle and backdrop overlay handlers
+    const mobileToggleBtn = document.getElementById('mobile-toggle');
+    const sidebarEl = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    if (mobileToggleBtn && sidebarEl) {
+      mobileToggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarEl.classList.toggle('open');
+        if (sidebarOverlay) sidebarOverlay.classList.toggle('active');
+      });
+    }
+
+    if (sidebarOverlay && sidebarEl) {
+      sidebarOverlay.addEventListener('click', () => {
+        sidebarEl.classList.remove('open');
+        sidebarOverlay.classList.remove('active');
+      });
+    }
+
+    // Auto-dismiss mobile sidebar when menu item selected
+    document.querySelectorAll('.menu-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && sidebarEl) {
+          sidebarEl.classList.remove('open');
+          if (sidebarOverlay) sidebarOverlay.classList.remove('active');
+        }
+      });
+    });
+
     // Mark current section completed on reaching bottom of page
     elements.contentBody.addEventListener('scroll', () => {
       const scrollHeight = elements.contentBody.scrollHeight;
