@@ -2555,42 +2555,19 @@ code {
     padding-bottom: 50px !important;
   }
 
-  /* Universal Table & Vim Editor Table Mobile Responsiveness */
-  .comparison-table-wrapper,
-  .table-responsive {
+  /* Universal Table Responsiveness */
+  table {
+    display: block !important;
     width: 100% !important;
-    max-width: 100% !important;
     overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    box-sizing: border-box !important;
-    margin-top: 15px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-  }
-
-  table,
-  .comparison-table {
-    display: table !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    border-collapse: collapse;
-    table-layout: auto;
-  }
-
-  table th, table td,
-  .comparison-table th, .comparison-table td {
-    padding: 8px 10px !important;
-    font-size: 0.82rem !important;
-    white-space: normal !important;
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  /* Keep code blocks & shortcuts compact */
-  table td code,
-  .comparison-table td code {
     white-space: nowrap !important;
-    font-weight: 600;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: collapse;
+  }
+
+  table th, table td {
+    padding: 8px 10px !important;
+    font-size: 0.85rem !important;
   }
 
   /* Universal Inline Grid Collapses to Single Column */
