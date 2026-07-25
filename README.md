@@ -2,6 +2,8 @@
 
 An interactive, web-based study guide and hands-on learning platform for **Red Hat Enterprise Linux 10 (RHEL 10)** and general Linux System Administration.
 
+> 🌐 **Live Demo**: [https://karanankade.github.io/Linux-Web-Book/](https://karanankade.github.io/Linux-Web-Book/)
+>
 > An interactive Linux & RHEL 10 study guide featuring a live terminal simulator, firewall zone manager, SELinux visualizer, network configurator, and built-in quizzes. Master system administration concepts hands-on — from LVM and NFS to SSH, `firewall-cmd`, and SELinux — all in your browser.
 
 ---
